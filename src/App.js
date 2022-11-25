@@ -1,23 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import BestFurnitureManufacture from "./BestFurnitureManufacture";
+import Header from "./Header";
+import MainImage from "./MainImage.js";
+import PopularProduct from "./PopularProductComponent/PopularProduct.js";
+import LikeProduct from "./LikeProductsComponent/LikeProduct.js";
+import SocialNetworkInspired from "./SocialInspiration.js";
+import TopPick from "./TopPickComponent/TopPick.js";
+import Footer from "./Footer";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <MainImage />
+      <PopularProduct />
+      <BestFurnitureManufacture />
+      <LikeProduct />
+      <SocialNetworkInspired />
+      <TopPick />
+      <Footer />
     </div>
   );
 }
