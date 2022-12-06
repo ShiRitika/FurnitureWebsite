@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React ,{useState , useEffect } from "react";
 import Header from "../Components/Header.js";
 import Footer from "../Components/Footer.js";
 import HeaderImage from "./HeaderImage.js";
@@ -11,22 +11,25 @@ const protocol = "http";
 const host = "localhost";
 const port = 8000;
 const url_configuration = {
-  getProduct: "sofa",
-};
+  getProduct:"bed"
+} 
 const apiURL = `${protocol}://${host}:${port}/${url_configuration.getProduct}`;
 
-function SofaProductDetails() {
-  const [product, setProduct] = useState([]);
+
+
+function BedProductDetails() {
+  const [ product , setProduct] = useState([]);
 
   const fetchData = () => {
-    return axios.get(apiURL).then((response) => {
+    return axios.get(apiURL)
+    .then((response) => {
       setProduct(response.data);
     });
-  };
-
+  }
+  
   useEffect(() => {
     fetchData();
-  }, []);
+  },[])
 
   const filterProducts = (id) => {
     const newID = parseInt(id);
@@ -40,6 +43,7 @@ function SofaProductDetails() {
   const { id } = params;
   const finalProduct = filterProducts(id);
 
+
   return (
     <div>
       <Header />
@@ -51,4 +55,4 @@ function SofaProductDetails() {
   );
 }
 
-export default SofaProductDetails;
+export default BedProductDetails;

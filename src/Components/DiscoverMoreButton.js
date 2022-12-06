@@ -10,9 +10,9 @@ const useStyle = makeStyles({
     marginTop: "2rem",
     "& div": {
       display: "block",
-      '& button.MuiButton-root:hover':{
-        border:'1px solid #ff7043'
-      }
+      "& button.MuiButton-root:hover": {
+        border: "1px solid #ff7043",
+      },
     },
 
     "& button": {
@@ -29,7 +29,7 @@ const useStyle = makeStyles({
   },
 });
 
-function DiscoverMoreButton() {
+const DiscoverMoreButton = () => {
   const classes = useStyle();
   return (
     <div className={classes.ButtonContainer}>
@@ -40,6 +40,6 @@ function DiscoverMoreButton() {
       </Stack>
     </div>
   );
-}
+};
 
 export default DiscoverMoreButton;

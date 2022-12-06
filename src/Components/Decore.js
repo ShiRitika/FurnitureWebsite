@@ -1,13 +1,21 @@
-import * as React from "react";
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from "@mui/styles";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
-import Decore1Image from "../assets/Decore1.png";
-import Decore2Image from "../assets/Decore2.png";
-import Decore3Image from "../assets/Decore3.png";
 import { Typography } from "@mui/material";
+import { Link } from "react-router-dom";
+import axios from "axios";
+
+const protocol = "http";
+const host = "localhost";
+const port = 8000;
+const url_configuration = {
+  getProduct:"decore"
+} 
+const apiURL = `${protocol}://${host}:${port}/${url_configuration.getProduct}`;
+
 
 const useStyles = makeStyles({
   sofaImage: {
@@ -29,57 +37,54 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-function DecoreImages() {
+const DecoreImages = () => {
   const classes = useStyles();
+
+  const [ product , setProduct] = useState([]);
+
+  const fetchData = () => {
+    return axios.get(apiURL)
+    .then((response) => {
+      const product = response.data;
+      setProduct(product);
+    });
+  }
+  
+  useEffect(() => {
+    fetchData();
+  },[])
+
+  const getProducts = () => {
+    return product.map((prd, idx) => {
+      return (
+        <Grid item xs={4}>
+          <Item>
+            <div>
+              <Link
+                className={classes.navLink}
+                to={`/productDetails/decore/${prd.id}`}
+              >
+                <img src={prd.image} alt="" className={classes.sofaImage} />
+              </Link>
+            </div>
+            <Typography variant="body">
+              {prd.description}
+              <br></br>
+              <br></br>
+              <span className={classes.dollar}>{`$ ${prd.price}`}</span>
+            </Typography>
+          </Item>
+        </Grid>
+      );
+    });
+  };
+
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Grid container>
-        <Grid item xs={4}>
-          <Item>
-            <div>
-              <img src={Decore1Image} alt="" className={classes.sofaImage} />
-            </div>
-            <Typography variant="body">
-              Bly Microfiber / Microsuedo 56" Armless <br></br>
-              Loveseat
-              <br></br>
-              <br></br>
-              <span className={classes.dollar}>$90</span>
-            </Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>
-            <div>
-              <img src={Decore2Image} alt="" className={classes.sofaImage} />
-            </div>
-            <Typography variant="body">
-              Bly Microfiber / Microsuedo 56" Armless <br></br>
-              Loveseat
-              <br></br>
-              <br></br>
-              <span className={classes.dollar}>$67</span>
-            </Typography>
-          </Item>
-        </Grid>
-        <Grid item xs={4}>
-          <Item>
-            <div>
-              <img src={Decore3Image} alt="" className={classes.sofaImage} />
-            </div>
-            <Typography variant="body">
-              Bly Microfiber / Microsuedo 56" Armless <br></br>
-              Loveseat
-              <br></br>
-              <br></br>
-              <span className={classes.dollar}>$37</span>
-            </Typography>
-          </Item>
-        </Grid>
-      </Grid>
+      <Grid container>{getProducts()}</Grid>
     </Box>
   );
-}
+};
 
 export default DecoreImages;

@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 
-function Page404() {
+const Page404 = () => {
     return(
         <div align='center'>
             <h1>404 Page</h1>

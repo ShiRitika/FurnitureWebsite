@@ -32,7 +32,7 @@ const useStyles = makeStyles({
   },
 });
 
-function TopPick() {
+const TopPick = () => {
   const classes = useStyles();
 
   return (
@@ -48,6 +48,6 @@ function TopPick() {
       <DiscoverMoreButton />
     </div>
   );
-}
+};
 
 export default TopPick;

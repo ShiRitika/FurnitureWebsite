@@ -4,15 +4,14 @@ import Footer from "../Components/Footer.js";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
-  PageHeading:{
-    textAlign:'center',
-    margin: '10rem',
-    backgroundColor:'pink'
-  }
+  PageHeading: {
+    textAlign: "center",
+    margin: "10rem",
+    backgroundColor: "pink",
+  },
 });
 
-
-function Page() {
+const Page = () => {
   const classes = useStyles();
   return (
     <div>
@@ -21,6 +20,6 @@ function Page() {
       <Footer />
     </div>
   );
-}
+};
 
 export default Page;

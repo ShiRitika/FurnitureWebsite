@@ -3,7 +3,6 @@ import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
 import socialImage1 from "../assets/SocialImage1.png";
 import socialImage2 from "../assets/SocialImage2.png";
-
 import DiscoverMoreButton from "./DiscoverMoreButton.js";
 import InstagramIcon from "@mui/icons-material/Instagram";
 
@@ -57,7 +56,7 @@ const useStyles = makeStyles({
   },
 });
 
-function SocialNetworkInspired() {
+const SocialNetworkInspired = () => {
   const classes = useStyles();
 
   return (
@@ -81,6 +80,6 @@ function SocialNetworkInspired() {
       </div>
     </div>
   );
-}
+};
 
 export default SocialNetworkInspired;

@@ -38,15 +38,15 @@ const useStyles = makeStyles({
           color: "white",
           backgroundColor: "#ff7043",
         },
-        "& button:hover" :{
-          color:'#ff7043'
+        "& button:hover": {
+          color: "#ff7043",
         },
       },
     },
   },
 });
 
-function BestFurnitureManufacture() {
+const BestFurnitureManufacture = () => {
   const classes = useStyles();
 
   return (
@@ -72,6 +72,6 @@ function BestFurnitureManufacture() {
       </div>
     </div>
   );
-}
+};
 
 export default BestFurnitureManufacture;

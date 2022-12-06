@@ -8,7 +8,7 @@ import SocialNetworkInspired from "../Components/SocialInspiration.js";
 import TopPick from "../Components/TopPick.js";
 import Footer from "../Components/Footer.js";
 
-function Home() {
+const Home = () => {
   return (
     <div>
       <Header />
@@ -21,6 +21,6 @@ function Home() {
       <Footer />
     </div>
   );
-}
+};
 
 export default Home;

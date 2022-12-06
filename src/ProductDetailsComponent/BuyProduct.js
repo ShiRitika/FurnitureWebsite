@@ -1,7 +1,7 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
-import StandardImageList from "./Image.js";
+import StandardImageList from "./StandardListImage.js";
 import Table from "@mui/material/Table";
 import TableCell from "@mui/material/TableCell";
 import TableContainer from "@mui/material/TableContainer";
@@ -113,60 +113,62 @@ const useStyles = makeStyles({
   },
 });
 
-function BuyProduct() {
+const BuyProduct = (props) => {
   const classes = useStyles();
-  return (
-    <div className={classes.mainContainer}>
-      <div className={classes.ImageContainer}>
-        <StandardImageList />
-      </div>
-      <div className={classes.TextContainer}>
-        <Typography variant="h5">Faded SkyBLue Denim Jeans</Typography>
-        <Typography variant="h6" className={classes.price}>
-          $149.99
-        </Typography>
-        <br></br>
-        <TableContainer className={classes.TableContainer}>
-          <Table>
-            <TableRow>
-              <TableCell>Category</TableCell>
-              <TableCell>:</TableCell>
-              <TableCell>Household</TableCell>
-            </TableRow>
-            <TableRow>
-              <TableCell>Availability</TableCell>
-              <TableCell>:</TableCell>
-              <TableCell>In Stock</TableCell>
-            </TableRow>
-          </Table>
-        </TableContainer>
-        <br></br>
-        <Divider />
-        <br></br>
-        <Typography variant="subtitle2" className={classes.description}>
-          A couch, also known as a sofa, settee, chesterfield, is a cushioned
-          item of furniture for seating multiple people ( uncommon for a single
-          person to use a couch alone)
-        </Typography>
-        <GroupedButtons />
-        <div className={classes.buttonContent}>
-          <AddToCartButton />
-          <div className={classes.heartContent}>
-            <FavoriteBorderIcon />
+  const product = props.data;
+
+  return product.map((prd, idx) => {
+    return (
+      <div className={classes.mainContainer}>
+        <div className={classes.ImageContainer}>
+          <StandardImageList img={prd.images} />
+        </div>
+        <div className={classes.TextContainer}>
+          <Typography variant="h5">{prd.productDetails[0].name}</Typography>
+          <Typography variant="h6" className={classes.price}>
+            ${prd.price}
+          </Typography>
+          <br></br>
+          <TableContainer className={classes.TableContainer}>
+            <Table>
+              <TableRow>
+                <TableCell>Category</TableCell>
+                <TableCell>:</TableCell>
+                <TableCell>{prd.productDetails[0].category}</TableCell>
+              </TableRow>
+              <TableRow>
+                <TableCell>Availability</TableCell>
+                <TableCell>:</TableCell>
+                <TableCell>{prd.productDetails[0].availability}</TableCell>
+              </TableRow>
+            </Table>
+          </TableContainer>
+          <br></br>
+          <Divider />
+          <br></br>
+          <Typography variant="subtitle2" className={classes.description}>
+            {prd.productDetails[0].description}
+          </Typography>
+          <GroupedButtons />
+          <div className={classes.buttonContent}>
+            <AddToCartButton />
+            <div className={classes.heartContent}>
+              <FavoriteBorderIcon />
+            </div>
+          </div>
+          <div className={classes.FacebookIconContainer}>
+            <FacebookOutlinedIcon />
+          </div>
+          <div className={classes.TwitterIconContainer}>
+            <TwitterIcon />
+          </div>
+          <div className={classes.LinkdinIconContainer}>
+            <LinkedInIcon />
           </div>
         </div>
-        <div className={classes.FacebookIconContainer}>
-          <FacebookOutlinedIcon />
-        </div>
-        <div className={classes.TwitterIconContainer}>
-          <TwitterIcon />
-        </div>
-        <div className={classes.LinkdinIconContainer}>
-          <LinkedInIcon />
-        </div>
       </div>
-    </div>
-  );
-}
+    );
+  });
+};
 
 export default BuyProduct;

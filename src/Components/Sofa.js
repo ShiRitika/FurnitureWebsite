@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState, useEffect } from 'react';
 import { makeStyles } from "@mui/styles";
 import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
@@ -6,7 +6,15 @@ import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
 import { Typography } from "@mui/material";
 import { Link } from "react-router-dom";
-import products from "../Constant/products";
+import axios from "axios";
+
+const protocol = "http";
+const host = "localhost";
+const port = 8000;
+const url_configuration = {
+  getProduct:"sofa"
+} 
+const apiURL = `${protocol}://${host}:${port}/${url_configuration.getProduct}`;
 
 const useStyles = makeStyles({
   sofaImage: {
@@ -28,20 +36,38 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-function SofaImages() {
+const SofaImages = () => {
   const classes = useStyles();
 
+  const [ product , setProduct] = useState([]);
+
+  const fetchData = () => {
+    return axios.get(apiURL)
+    .then((response) => {
+      const product = response.data;
+      setProduct(product);
+    });
+  }
+  
+  useEffect(() => {
+    fetchData();
+  },[])
+
   const getProducts = () => {
-    return products.map((prd,idx) => {
+    return product.map((prd, idx) => {
       return (
         <Grid item xs={4}>
           <Item>
             <div>
-            <Link className={classes.navLink} to="/productDetails">
-              <img src={prd.img} alt="" className={classes.sofaImage} /></Link>
+              <Link
+                className={classes.navLink}
+                to={`/productDetails/sofa/${prd.id}`}
+              >
+                <img src={prd.image} alt="" className={classes.sofaImage} />
+              </Link>
             </div>
-            <Typography variant="body" >
-              {prd.desc}
+            <Typography variant="body">
+              {prd.description}
               <br></br>
               <br></br>
               <span className={classes.dollar}>{`$ ${prd.price}`}</span>
@@ -49,16 +75,14 @@ function SofaImages() {
           </Item>
         </Grid>
       );
-    }) 
+    });
   };
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Grid container>
-        {getProducts()}
-      </Grid>
+      <Grid container>{getProducts()}</Grid>
     </Box>
   );
-}
+};
 
 export default SofaImages;

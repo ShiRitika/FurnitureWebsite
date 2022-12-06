@@ -4,15 +4,14 @@ import Footer from "../Components/Footer.js";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
-  MyAccountHeading:{
-    textAlign:'center',
-    margin: '10rem',
-    backgroundColor:'pink'
-  }
+  MyAccountHeading: {
+    textAlign: "center",
+    margin: "10rem",
+    backgroundColor: "pink",
+  },
 });
 
-
-function MyAccount() {
+const MyAccount = () => {
   const classes = useStyles();
   return (
     <div>
@@ -21,6 +20,6 @@ function MyAccount() {
       <Footer />
     </div>
   );
-}
+};
 
 export default MyAccount;

@@ -29,7 +29,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-function TopPickImages() {
+const TopPickImages = () => {
   const classes = useStyles();
 
   return (
@@ -80,6 +80,6 @@ function TopPickImages() {
       </Grid>
     </Box>
   );
-}
+};
 
 export default TopPickImages;

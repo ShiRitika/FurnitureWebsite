@@ -93,7 +93,7 @@ const useStyles = makeStyles({
   },
 });
 
-function Review() {
+const Review = () => {
   const classes = useStyles();
   return (
     <div className={classes.mainContainer}>

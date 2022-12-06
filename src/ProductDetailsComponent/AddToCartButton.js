@@ -28,7 +28,7 @@ const useStyle = makeStyles({
   },
 });
 
-function AddToCartButton() {
+const AddToCartButton = () => {
   const classes = useStyle();
   return (
     <div className={classes.ButtonContainer}>
@@ -39,6 +39,6 @@ function AddToCartButton() {
       </Stack>
     </div>
   );
-}
+};
 
 export default AddToCartButton;

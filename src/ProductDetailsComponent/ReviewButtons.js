@@ -22,7 +22,7 @@ const useStyle = makeStyles({
   },
 });
 
-export default function ReviewButtons() {
+const ReviewButtons = () => {
   const classes = useStyle();
   return (
     <div className={classes.mainContainer}>
@@ -34,4 +34,6 @@ export default function ReviewButtons() {
       </Stack>
     </div>
   );
-}
+};
+
+export default ReviewButtons;

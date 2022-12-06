@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
-import LikeImage1 from '../assets/LikeImage1.png';
+import LikeImage1 from "../assets/LikeImage1.png";
 import LikeImage2 from "../assets/LikeImage2.png";
 import LikeImage3 from "../assets/LikeImage3.png";
 import { Typography } from "@mui/material";
@@ -29,7 +29,7 @@ const Item = styled(Paper)(({ theme }) => ({
   color: theme.palette.text.secondary,
 }));
 
-function LikeProductImages() {
+const LikeProductImages = () => {
   const classes = useStyles();
 
   return (
@@ -80,6 +80,6 @@ function LikeProductImages() {
       </Grid>
     </Box>
   );
-}
+};
 
 export default LikeProductImages;

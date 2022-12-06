@@ -33,7 +33,7 @@ const useStyles = makeStyles({
   likeProductHead: {},
 });
 
-function LikeProduct() {
+const LikeProduct = () => {
   const classes = useStyles();
 
   return (
@@ -49,6 +49,6 @@ function LikeProduct() {
       <DiscoverMoreButton />
     </div>
   );
-}
+};
 
 export default LikeProduct;

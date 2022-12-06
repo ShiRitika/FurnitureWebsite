@@ -18,7 +18,7 @@ const useStyles = makeStyles({
   },
 });
 
-export default function CustomizedRating() {
+const CustomizedRating = () => {
   const classes = useStyles();
 
   return (
@@ -51,4 +51,6 @@ export default function CustomizedRating() {
       </Box>
     </div>
   );
-}
+};
+
+export default CustomizedRating;

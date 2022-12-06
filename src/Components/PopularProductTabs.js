@@ -7,11 +7,11 @@ import TabPanel from "@mui/lab/TabPanel";
 import SofaImages from "./Sofa";
 import TableImages from "./Table";
 import ChairImages from "./Chair";
-import BedImages from "./Bed"; 
-import DecoreImages from './Decore';
-import LightningImages from './Lightning';
+import BedImages from "./Bed";
+import DecoreImages from "./Decore";
+import LightningImages from "./Lightning";
 
-function ProductTabs() {
+const ProductTabs = () => {
   const [value, setValue] = React.useState("1");
 
   const handleChange = (event, newValue) => {
@@ -34,14 +34,24 @@ function ProductTabs() {
         <TabPanel value="1">
           <SofaImages />
         </TabPanel>
-        <TabPanel value="2"><TableImages /></TabPanel>
-        <TabPanel value="3"><ChairImages/></TabPanel>
-        <TabPanel value="4"><BedImages/></TabPanel>
-        <TabPanel value="5"><LightningImages/></TabPanel>
-        <TabPanel value="6"><DecoreImages /></TabPanel>
+        <TabPanel value="2">
+          <TableImages />
+        </TabPanel>
+        <TabPanel value="3">
+          <ChairImages />
+        </TabPanel>
+        <TabPanel value="4">
+          <BedImages />
+        </TabPanel>
+        <TabPanel value="5">
+          <LightningImages />
+        </TabPanel>
+        <TabPanel value="6">
+          <DecoreImages />
+        </TabPanel>
       </TabContext>
     </Box>
   );
-}
+};
 
 export default ProductTabs;

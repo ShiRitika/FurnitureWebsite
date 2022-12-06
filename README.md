@@ -21,6 +21,10 @@ Furniture Website is a single page Application made of using Javascript's very p
 - Setup of  React-js, material-UI installation.
 - Setup ES Lint and identifying its error and resolving them.
 - writing clean and structure code.
+- How to use props.
+- include useParams.
+- implementation of filter & Map function.
+- React Routing with link , path, params etc. 
 
 # Getting Started with Create React App
 

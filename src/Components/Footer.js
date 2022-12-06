@@ -115,7 +115,7 @@ const useStyle = makeStyles({
   },
 });
 
-function Footer() {
+const Footer = () => {
   const classes = useStyle();
   return (
     <div className={classes.bigContainer}>
@@ -165,13 +165,19 @@ function Footer() {
             Quick Links
           </Typography>
           <li className={classes.linkItem}>
-            <a className={classes.link} href="#">Image Licensin</a>
+            <a className={classes.link} href="#">
+              Image Licensin
+            </a>
           </li>
           <li className={classes.linkItem}>
-            <a className={classes.link} href="#">Style Guide</a>
+            <a className={classes.link} href="#">
+              Style Guide
+            </a>
           </li>
           <li className={classes.linkItem}>
-            <a className={classes.link} href="#">Privacy policy</a>
+            <a className={classes.link} href="#">
+              Privacy policy
+            </a>
           </li>
         </div>
         <div className={classes.blueContent}>
@@ -179,13 +185,19 @@ function Footer() {
             Shop Category
           </Typography>
           <li className={classes.linkItem}>
-            <a className={classes.link} href="#">Image Licensin</a>
+            <a className={classes.link} href="#">
+              Image Licensin
+            </a>
           </li>
           <li className={classes.linkItem}>
-            <a className={classes.link} href="#">Style Guide</a>
+            <a className={classes.link} href="#">
+              Style Guide
+            </a>
           </li>
           <li className={classes.linkItem}>
-            <a className={classes.link} href="#">Privacy policy</a>
+            <a className={classes.link} href="#">
+              Privacy policy
+            </a>
           </li>
         </div>
         <div className={classes.blueContent}>
@@ -193,13 +205,19 @@ function Footer() {
             Partners
           </Typography>
           <li className={classes.linkItem}>
-            <a className={classes.link} href="#">Image Licensin</a>
+            <a className={classes.link} href="#">
+              Image Licensin
+            </a>
           </li>
           <li className={classes.linkItem}>
-            <a className={classes.link} href="#">Style Guide</a>
+            <a className={classes.link} href="#">
+              Style Guide
+            </a>
           </li>
           <li className={classes.linkItem}>
-            <a className={classes.link} href="#">Privacy policy</a>
+            <a className={classes.link} href="#">
+              Privacy policy
+            </a>
           </li>
         </div>
       </div>
@@ -212,6 +230,6 @@ function Footer() {
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

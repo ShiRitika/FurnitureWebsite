@@ -12,7 +12,7 @@ const useStyles = makeStyles({
 });
 
 
-function Contact() {
+const Contact = () => {
   const classes = useStyles();
   return (
     <div>

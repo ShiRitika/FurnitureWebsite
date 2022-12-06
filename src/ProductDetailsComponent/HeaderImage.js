@@ -52,7 +52,6 @@ const HeaderImage = () => {
       <div className={classes.imageContent}>
         <img src={mainImage} alt="" className={classes.mainImage} />
       </div>
-
       <div className={classes.TextContainer}>
         <Typography variant="h4">PRODUCT DETAILS</Typography>
         <Typography variant="body1">Home {">"} Product Details</Typography>

@@ -15,7 +15,7 @@ const useStyles = makeStyles({
   },
 });
 
-function GroupedButtons() {
+const GroupedButtons = () => {
   const classes = useStyles();
 
   const [currentNum, UpdatedNum] = useState(1);
@@ -39,6 +39,6 @@ function GroupedButtons() {
       <Button onClick={IncrementNum}>+</Button>
     </ButtonGroup>
   );
-}
+};
 
 export default GroupedButtons;

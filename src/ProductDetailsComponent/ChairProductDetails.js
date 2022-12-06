@@ -11,11 +11,11 @@ const protocol = "http";
 const host = "localhost";
 const port = 8000;
 const url_configuration = {
-  getProduct: "sofa",
+  getProduct: "chair",
 };
 const apiURL = `${protocol}://${host}:${port}/${url_configuration.getProduct}`;
 
-function SofaProductDetails() {
+function ChairProductDetails() {
   const [product, setProduct] = useState([]);
 
   const fetchData = () => {
@@ -51,4 +51,4 @@ function SofaProductDetails() {
   );
 }
 
-export default SofaProductDetails;
+export default ChairProductDetails;

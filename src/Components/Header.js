@@ -4,7 +4,7 @@ import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
 import logoImage from "../assets/furnLogo.png";
 import { Badge } from "@mui/material";
-import { Link , NavLink } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 
 const useStyles = makeStyles({
   navContainer: {
@@ -19,9 +19,9 @@ const useStyles = makeStyles({
     position: "relative",
     color: "black",
     display: "flex",
-    '& li:hover' :{
-      backgroundColor:'#dfb8a4',
-      borderRadius: '4px'
+    "& li:hover": {
+      backgroundColor: "#dfb8a4",
+      borderRadius: "4px",
     },
     "& span": {
       "& span": {
@@ -34,8 +34,8 @@ const useStyles = makeStyles({
     margin: "2rem 1rem",
     fontSize: "16px",
     cursor: "pointer",
-    '& a.active':{
-        color:'#ef5350'
+    "& a.active": {
+      color: "#ef5350",
     },
   },
   navLink: {
@@ -81,7 +81,6 @@ const useStyles = makeStyles({
   "css-jcn4dz-MuiBadge-badge": {
     backgroundColor: "#ef5350",
   },
-  
 });
 
 const Header = () => {
@@ -93,39 +92,60 @@ const Header = () => {
       <div className={classes.navContent}>
         <ul className={classes.navBar}>
           <li className={classes.navItem}>
-            <NavLink className={classes.navLink} to="/">Home</NavLink>
+            <NavLink className={classes.navLink} to="/">
+              Home
+            </NavLink>
           </li>
           <li className={classes.navItem}>
-            <NavLink className={classes.navLink} to="/product">Product</NavLink>
+            <NavLink className={classes.navLink} to="/product">
+              Product
+            </NavLink>
           </li>
           <li className={classes.navItem}>
-            <NavLink className={classes.navLink} to="/about">About</NavLink>
+            <NavLink className={classes.navLink} to="/about">
+              About
+            </NavLink>
           </li>
           <li className={classes.navItem}>
-            <NavLink className={classes.navLink} to="/page">Page</NavLink>
+            <NavLink className={classes.navLink} to="/page">
+              Page
+            </NavLink>
           </li>
           <li className={classes.navItem}>
-            <NavLink className={classes.navLink} to="/blog">Blog</NavLink>
+            <NavLink className={classes.navLink} to="/blog">
+              Blog
+            </NavLink>
           </li>
           <li className={classes.navItem}>
-            <NavLink className={classes.navLink} to="/contact">Contact</NavLink>
+            <NavLink className={classes.navLink} to="/contact">
+              Contact
+            </NavLink>
           </li>
         </ul>
         <div className={classes.rightConatiner}>
           <div className={classes.searchProducts}>
             <form action="">
-              <input className={classes.searchInput} type="text" placeholder="Search Product" name="search"></input>
+              <input
+                className={classes.searchInput}
+                type="text"
+                placeholder="Search Product"
+                name="search"
+              ></input>
               <button className={classes.searchIcon} type="submit">
                 <SearchIcon />
               </button>
             </form>
           </div>
           <li className={classes.navItem}>
-            <NavLink className={classes.navLink} to="/myAccount">My Account</NavLink>
+            <NavLink className={classes.navLink} to="/myAccount">
+              My Account
+            </NavLink>
           </li>
-          <Badge className={classes.shopingIcon}
+          <Badge
+            className={classes.shopingIcon}
             badgeContent={"0"}
-            color="secondary">
+            color="secondary"
+          >
             <ShoppingBagIcon className={classes.shopingIcon} />
           </Badge>
         </div>

@@ -10,21 +10,21 @@ const useStyles = makeStyles({
     "& div": {
       "& div": {
         "& div": {
-          cursor: 'pointer',
+          cursor: "pointer",
           borderRadius: "0px",
           color: "black",
           boxShadow: "none",
           fontWeight: "bold",
-          '& button':{
+          "& button": {
             color: "black",
             textTransform: "capitalize",
             minWidth: "16.66%",
           },
-          '& button.Mui-selected ': {
-            color: '#ff7043',
+          "& button.Mui-selected ": {
+            color: "#ff7043",
           },
-          '& span.MuiTabs-indicator':{
-            backgroundColor: '#ff7043'
+          "& span.MuiTabs-indicator": {
+            backgroundColor: "#ff7043",
           },
         },
       },
@@ -45,7 +45,7 @@ const useStyles = makeStyles({
   PopularProductHead: {},
 });
 
-function PopularProduct() {
+const PopularProduct = () => {
   const classes = useStyles();
 
   return (
@@ -60,6 +60,6 @@ function PopularProduct() {
       <ProductTabs />
     </div>
   );
-}
+};
 
 export default PopularProduct;

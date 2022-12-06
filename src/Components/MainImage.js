@@ -59,8 +59,8 @@ const useStyles = makeStyles({
           color: "white",
           backgroundColor: "#ff7043",
         },
-        "& button:hover" :{
-          color:'#ff7043'
+        "& button:hover": {
+          color: "#ff7043",
         },
       },
     },

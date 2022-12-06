@@ -4,15 +4,14 @@ import Footer from "../Components/Footer.js";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
-  ProductHeading:{
-    textAlign:'center',
-    margin: '10rem',
-    backgroundColor:'pink'
-  }
+  ProductHeading: {
+    textAlign: "center",
+    margin: "10rem",
+    backgroundColor: "pink",
+  },
 });
 
-
-function Product() {
+const Product = () => {
   const classes = useStyles();
   return (
     <div>
@@ -21,6 +20,6 @@ function Product() {
       <Footer />
     </div>
   );
-}
+};
 
 export default Product;

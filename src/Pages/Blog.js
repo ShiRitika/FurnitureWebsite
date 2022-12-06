@@ -4,15 +4,14 @@ import Footer from "../Components/Footer.js";
 import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
-  BlogHeading:{
-    textAlign:'center',
-    margin: '10rem',
-    backgroundColor:'pink'
-  }
+  BlogHeading: {
+    textAlign: "center",
+    margin: "10rem",
+    backgroundColor: "pink",
+  },
 });
 
-
-function Blog() {
+const Blog = () => {
   const classes = useStyles();
   return (
     <div>
@@ -21,6 +20,6 @@ function Blog() {
       <Footer />
     </div>
   );
-}
+};
 
 export default Blog;
