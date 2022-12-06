@@ -2,8 +2,9 @@ import React from "react";
 import { makeStyles } from "@mui/styles";
 import SearchIcon from "@mui/icons-material/Search";
 import ShoppingBagIcon from "@mui/icons-material/ShoppingBag";
-import logoImage from "./assets/furnLogo.png";
+import logoImage from "../assets/furnLogo.png";
 import { Badge } from "@mui/material";
+import { Link , NavLink } from "react-router-dom";
 
 const useStyles = makeStyles({
   navContainer: {
@@ -30,9 +31,12 @@ const useStyles = makeStyles({
   },
   navItem: {
     display: "inline-block",
-    padding: "2rem 1rem",
+    margin: "2rem 1rem",
     fontSize: "16px",
     cursor: "pointer",
+    '& a.active':{
+        color:'#ef5350'
+    },
   },
   navLink: {
     textDecoration: "none",
@@ -68,7 +72,7 @@ const useStyles = makeStyles({
   },
   logoImage: {
     width: "130px",
-    height: "110px",
+    height: "120px",
     zIndex: 5,
     position: "absolute",
     top: 0,
@@ -77,6 +81,7 @@ const useStyles = makeStyles({
   "css-jcn4dz-MuiBadge-badge": {
     backgroundColor: "#ef5350",
   },
+  
 });
 
 const Header = () => {
@@ -88,22 +93,22 @@ const Header = () => {
       <div className={classes.navContent}>
         <ul className={classes.navBar}>
           <li className={classes.navItem}>
-            <a className={classes.navLink} href="#"> Home</a>
+            <NavLink className={classes.navLink} to="/">Home</NavLink>
           </li>
           <li className={classes.navItem}>
-            <a className={classes.navLink} href="#">Product</a>
+            <NavLink className={classes.navLink} to="/product">Product</NavLink>
           </li>
           <li className={classes.navItem}>
-            <a className={classes.navLink} href="#">About</a>
+            <NavLink className={classes.navLink} to="/about">About</NavLink>
           </li>
           <li className={classes.navItem}>
-            <a className={classes.navLink} href="#">Page</a>
+            <NavLink className={classes.navLink} to="/page">Page</NavLink>
           </li>
           <li className={classes.navItem}>
-            <a className={classes.navLink} href="#">Blog</a>
+            <NavLink className={classes.navLink} to="/blog">Blog</NavLink>
           </li>
           <li className={classes.navItem}>
-            <a className={classes.navLink} href="#">Contact</a>
+            <NavLink className={classes.navLink} to="/contact">Contact</NavLink>
           </li>
         </ul>
         <div className={classes.rightConatiner}>
@@ -116,7 +121,7 @@ const Header = () => {
             </form>
           </div>
           <li className={classes.navItem}>
-            <a className={classes.navLink} href="#"> My Account{" "}</a>
+            <NavLink className={classes.navLink} to="/myAccount">My Account</NavLink>
           </li>
           <Badge className={classes.shopingIcon}
             badgeContent={"0"}

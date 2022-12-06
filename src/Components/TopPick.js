@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
 import TopPickImages from "./TopPickImage.js";
-import DiscoverMoreButton from "../DiscoverMoreButton.js";
+import DiscoverMoreButton from "../Components/DiscoverMoreButton.js";
 
 const useStyles = makeStyles({
   TopProductContainer: {

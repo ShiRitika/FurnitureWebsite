@@ -1,8 +1,8 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
-import BestFurnitureImage from "./assets/BestFurnitureManufactureImage.png";
-import DiscoverMoreButton from "./DiscoverMoreButton.js";
+import BestFurnitureImage from "../assets/BestFurnitureManufactureImage.png";
+import DiscoverMoreButton from "../Components/DiscoverMoreButton.js";
 
 const useStyles = makeStyles({
   MainConatiner: {

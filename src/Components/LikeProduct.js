@@ -2,7 +2,7 @@ import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
 import LikeProductImages from "./LikeProductImages.js";
-import DiscoverMoreButton from "../DiscoverMoreButton.js";
+import DiscoverMoreButton from "./DiscoverMoreButton.js";
 
 const useStyles = makeStyles({
   likeProductContainer: {

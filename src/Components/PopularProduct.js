@@ -10,6 +10,7 @@ const useStyles = makeStyles({
     "& div": {
       "& div": {
         "& div": {
+          cursor: 'pointer',
           borderRadius: "0px",
           color: "black",
           boxShadow: "none",

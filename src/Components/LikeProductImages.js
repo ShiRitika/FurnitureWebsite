@@ -4,15 +4,15 @@ import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
-import sofa1Image from "../assets/Sofa1.png";
-import sofa2Image from "../assets/Sofa2.png";
-import sofa3Image from "../assets/Sofa3.png";
+import LikeImage1 from '../assets/LikeImage1.png';
+import LikeImage2 from "../assets/LikeImage2.png";
+import LikeImage3 from "../assets/LikeImage3.png";
 import { Typography } from "@mui/material";
 
 const useStyles = makeStyles({
   sofaImage: {
     height: "13rem",
-    width: "20rem",
+    width: "100%",
   },
   dollar: {
     color: "#a10606",
@@ -24,56 +24,56 @@ const useStyles = makeStyles({
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
   ...theme.typography.body2,
-  padding: theme.spacing(1),
+  padding: theme.spacing(0),
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
 
-function SofaImages() {
+function LikeProductImages() {
   const classes = useStyles();
 
   return (
     <Box sx={{ width: "100%" }}>
-      <Grid container>
+      <Grid container spacing={2}>
         <Grid item xs={4}>
           <Item>
             <div>
-              <img src={sofa1Image} alt="" className={classes.sofaImage} />
+              <img src={LikeImage1} alt="" className={classes.sofaImage} />
             </div>
             <Typography variant="body">
               Bly Microfiber / Microsuedo 56" Armless <br></br>
               Loveseat
               <br></br>
               <br></br>
-              <span className={classes.dollar}>$367</span>
+              <span className={classes.dollar}>$167</span>
             </Typography>
           </Item>
         </Grid>
         <Grid item xs={4}>
           <Item>
             <div>
-              <img src={sofa2Image} alt="" className={classes.sofaImage} />
+              <img src={LikeImage2} alt="" className={classes.sofaImage} />
             </div>
             <Typography variant="body">
               Bly Microfiber / Microsuedo 56" Armless <br></br>
               Loveseat
               <br></br>
               <br></br>
-              <span className={classes.dollar}>$367</span>
+              <span className={classes.dollar}>$167</span>
             </Typography>
           </Item>
         </Grid>
         <Grid item xs={4}>
           <Item>
             <div>
-              <img src={sofa3Image} alt="" className={classes.sofaImage} />
+              <img src={LikeImage3} alt="" className={classes.sofaImage} />
             </div>
             <Typography variant="body">
               Bly Microfiber / Microsuedo 56" Armless <br></br>
               Loveseat
               <br></br>
               <br></br>
-              <span className={classes.dollar}>$367</span>
+              <span className={classes.dollar}>$167</span>
             </Typography>
           </Item>
         </Grid>
@@ -82,4 +82,4 @@ function SofaImages() {
   );
 }
 
-export default SofaImages;
+export default LikeProductImages;

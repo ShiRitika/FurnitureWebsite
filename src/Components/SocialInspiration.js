@@ -1,8 +1,9 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
-import socialImage1 from "./assets/SocialImage1.png";
-import socialImage2 from "./assets/SocialImage2.png";
+import socialImage1 from "../assets/SocialImage1.png";
+import socialImage2 from "../assets/SocialImage2.png";
+
 import DiscoverMoreButton from "./DiscoverMoreButton.js";
 import InstagramIcon from "@mui/icons-material/Instagram";
 

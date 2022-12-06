@@ -1,26 +1,29 @@
 import React from "react";
 import "./App.css";
-import BestFurnitureManufacture from "./BestFurnitureManufacture";
-import Header from "./Header";
-import MainImage from "./MainImage.js";
-import PopularProduct from "./PopularProductComponent/PopularProduct.js";
-import LikeProduct from "./LikeProductsComponent/LikeProduct.js";
-import SocialNetworkInspired from "./SocialInspiration.js";
-import TopPick from "./TopPickComponent/TopPick.js";
-import Footer from "./Footer";
+import { Routes, Route } from "react-router-dom";
+import Home from "./Pages/Home.js";
+import Product from "./Pages/Product.js";
+import About from "./Pages/About.js";
+import Page from "./Pages/Page";
+import Blog from "./Pages/Blog";
+import Contact from "./Pages/Contact";
+import MyAccount from "./Pages/MyAccount";
+import SofaProductDetails from "./ProductDetailsComponent/SofaProductDetails.js";
+import Page404 from './Pages/Page404.js';
 
 function App() {
   return (
-    <div className="App">
-      <Header />
-      <MainImage />
-      <PopularProduct />
-      <BestFurnitureManufacture />
-      <LikeProduct />
-      <SocialNetworkInspired />
-      <TopPick />
-      <Footer />
-    </div>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/product" element={<Product />} />
+      <Route path="/page" element={<Page />} />
+      <Route path="/blog" element={<Blog />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="/myAccount" element={<MyAccount />} />
+      <Route path="/productDetails" element={<SofaProductDetails />} />
+      <Route path="/*" element={<Page404 />} />
+    </Routes>
   );
 }
 

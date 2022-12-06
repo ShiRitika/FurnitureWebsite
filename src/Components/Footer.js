@@ -1,5 +1,5 @@
 import React from "react";
-import "./App.css";
+import "../App.css";
 import { makeStyles } from "@mui/styles";
 import { Typography } from "@mui/material";
 import LocalShippingIcon from "@mui/icons-material/LocalShipping";

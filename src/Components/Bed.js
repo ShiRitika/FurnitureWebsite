@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 import Grid from "@mui/material/Grid";
 import Paper from "@mui/material/Paper";
 import Box from "@mui/material/Box";
-import Bed1Image from "../assets/Bed1.png";
+import Bed1Image from '../assets/Bed1.png';
 import Bed2Image from "../assets/Bed2.png";
 import Bed3Image from "../assets/Bed3.png";
 import { Typography } from "@mui/material";

@@ -1,6 +1,6 @@
 import React from "react";
 import { makeStyles } from "@mui/styles";
-import mainImage from "./assets/mainImage.jpg";
+import mainImage from "../assets/mainImage.jpg";
 import { Typography } from "@mui/material";
 import DiscoverMoreButton from "./DiscoverMoreButton.js";
 
