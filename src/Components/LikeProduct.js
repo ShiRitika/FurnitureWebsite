@@ -46,9 +46,9 @@ const LikeProduct = () => {
         quis viverra arnare, eros dolar enterdum nulla
       </Typography>
       <LikeProductImages />
-      <DiscoverMoreButton />
+      <DiscoverMoreButton>Discover More</DiscoverMoreButton>
     </div>
   );
-};
+}
 
 export default LikeProduct;

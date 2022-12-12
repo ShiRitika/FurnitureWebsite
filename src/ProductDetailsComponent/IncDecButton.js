@@ -1,16 +1,16 @@
-import React, { useState } from "react";
-import Button from "@mui/material/Button";
-import ButtonGroup from "@mui/material/ButtonGroup";
-import { makeStyles } from "@mui/styles";
+import React, { useState } from 'react';
+import Button from '@mui/material/Button';
+import ButtonGroup from '@mui/material/ButtonGroup';
+import { makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles({
   btnContainer: {
-    margin: "1rem 0",
-    "& button": {
-      fontSize: "1rem",
-      border: "1px solid #90a4ae",
-      color: "black",
-      borderRadius: "30px",
+    margin: '1rem 0',
+    '& button': {
+      fontSize: '1rem',
+      border: '1px solid #90a4ae',
+      color: 'black',
+      borderRadius: '30px',
     },
   },
 });
@@ -39,6 +39,6 @@ const GroupedButtons = () => {
       <Button onClick={IncrementNum}>+</Button>
     </ButtonGroup>
   );
-};
+}
 
 export default GroupedButtons;

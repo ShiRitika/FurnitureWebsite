@@ -1,29 +1,29 @@
-import * as React from "react";
-import Stack from "@mui/material/Stack";
-import Button from "@mui/material/Button";
-import { makeStyles } from "@mui/styles";
+import * as React from 'react';
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
+import { makeStyles } from '@mui/styles';
 
 const useStyle = makeStyles({
   ButtonContainer: {
-    margin: "0",
-    "& div": {
-      display: "block",
-      "& button": {
-        backgroundColor: "#ff7043",
+    margin: '0',
+    '& div': {
+      display: 'block',
+      '& button': {
+        backgroundColor: '#ff7043',
       },
-      "& button.MuiButton-root:hover": {
-        border: "1px solid #ff7043",
-        color: "black",
+      '& button.MuiButton-root:hover': {
+        border: '1px solid #ff7043',
+        color: 'black',
       },
     },
 
-    "& button": {
-      color: "white",
-      border: "1px solid #d09ed1",
-      textAlign: "center",
+    '& button': {
+      color: 'white',
+      border: '1px solid #d09ed1',
+      textAlign: 'center',
       lineHeight: 2,
-      padding: "8px 40px",
-      borderRadius: "1px",
+      padding: '8px 40px',
+      borderRadius: '1px',
     },
   },
 });
@@ -39,6 +39,6 @@ const AddToCartButton = () => {
       </Stack>
     </div>
   );
-};
+}
 
 export default AddToCartButton;

@@ -1,45 +1,45 @@
-import React from "react";
-import Button from "@mui/material/Button";
-import Stack from "@mui/material/Stack";
-import { makeStyles } from "@mui/styles";
-import { Typography } from "@mui/material";
-import Rating from "@mui/material/Rating";
+import React from 'react';
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+import { makeStyles } from '@mui/styles';
+import { Typography } from '@mui/material';
+import Rating from '@mui/material/Rating';
 
 const useStyle = makeStyles({
   ButtonContainer: {
-    margin: "0",
-    "& div": {
-      display: "block",
-      "& button": {
-        backgroundColor: "#ff7043",
+    margin: '0',
+    '& div': {
+      display: 'block',
+      '& button': {
+        backgroundColor: '#ff7043',
       },
-      "& button.MuiButton-root:hover": {
-        border: "1px solid #ff7043",
-        color: "black",
+      '& button.MuiButton-root:hover': {
+        border: '1px solid #ff7043',
+        color: 'black',
       },
     },
 
-    "& button": {
-      color: "white",
-      border: "1px solid #d09ed1",
-      textAlign: "center",
+    '& button': {
+      color: 'white',
+      border: '1px solid #d09ed1',
+      textAlign: 'center',
       lineHeight: 2,
-      padding: "8px 40px",
-      borderRadius: "1px",
+      padding: '8px 40px',
+      borderRadius: '1px',
     },
   },
   formContainer: {
-    margin: "3rem 0",
+    margin: '3rem 0',
   },
   formContent: {},
   formInput: {
-    width: "100%",
-    height: "40px",
-    margin: "0.4rem 0",
+    width: '100%',
+    height: '40px',
+    margin: '0.4rem 0',
   },
   reviewContent: {
-    color: "#5a5757",
-    fontSize: "15px",
+    color: '#5a5757',
+    fontSize: '15px',
   },
 });
 
@@ -83,7 +83,7 @@ const Form = () => {
             className={classes.formInput}
             id="review"
             placeholder="Review"
-          ></textarea>
+          />
         </div>
       </div>
       <div className={classes.ButtonContainer} align="right">
@@ -95,6 +95,6 @@ const Form = () => {
       </div>
     </div>
   );
-};
+}
 
 export default Form;

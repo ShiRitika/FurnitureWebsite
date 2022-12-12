@@ -1,31 +1,31 @@
-import React from "react";
-import { makeStyles } from "@mui/styles";
-import { Typography } from "@mui/material";
-import TopPickImages from "./TopPickImage.js";
-import DiscoverMoreButton from "../Components/DiscoverMoreButton.js";
+import React from 'react';
+import { makeStyles } from '@mui/styles';
+import { Typography } from '@mui/material';
+import TopPickImages from './TopPickImage.js';
+import DiscoverMoreButton from './DiscoverMoreButton.js';
 
 const useStyles = makeStyles({
   TopProductContainer: {
-    textAlign: "center",
-    padding: "2rem 10rem 2rem 10rem",
-    "& h3": {
-      fontWeight: "bold",
-      fontSize: "2rem",
-      margin: "1rem",
+    textAlign: 'center',
+    padding: '2rem 10rem 2rem 10rem',
+    '& h3': {
+      fontWeight: 'bold',
+      fontSize: '2rem',
+      margin: '1rem',
     },
-    "& p": {
-      color: "rgba(0, 0, 0, 0.6)",
+    '& p': {
+      color: 'rgba(0, 0, 0, 0.6)',
       fontWeight: 500,
-      padding: "0 12rem",
-      marginBottom: "3rem",
+      padding: '0 12rem',
+      marginBottom: '3rem',
     },
-    "& div": {
-      "& div": {
-        "& div": {
-          borderRadius: "0px",
-          color: "black",
-          boxShadow: "none",
-          fontWeight: "bold",
+    '& div': {
+      '& div': {
+        '& div': {
+          borderRadius: '0px',
+          color: 'black',
+          boxShadow: 'none',
+          fontWeight: 'bold',
         },
       },
     },
@@ -45,9 +45,9 @@ const TopPick = () => {
         quis viverra arnare, eros dolar enterdum nulla
       </Typography>
       <TopPickImages />
-      <DiscoverMoreButton />
+      <DiscoverMoreButton>Discover More</DiscoverMoreButton>
     </div>
   );
-};
+}
 
 export default TopPick;

@@ -1,22 +1,22 @@
 import React from "react";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
-import Home from "./Pages/Home.js";
-import Product from "./Pages/Product.js";
-import About from "./Pages/About.js";
+import Home from "./Pages/Home";
+import Product from "./Pages/Product";
+import About from "./Pages/About";
 import Page from "./Pages/Page";
 import Blog from "./Pages/Blog";
 import Contact from "./Pages/Contact";
 import MyAccount from "./Pages/MyAccount";
-import SofaProductDetails from "./ProductDetailsComponent/SofaProductDetails.js";
+import SofaProductDetails from "./ProductDetailsComponent/SofaProductDetails";
 import TableProductDetails from "./ProductDetailsComponent/TableProductDetails";
-import ChairProductDetails from "./ProductDetailsComponent/ChairProductDetails.js";
-import BedProductDetails from "./ProductDetailsComponent/BedProductDetails.js";
+import ChairProductDetails from "./ProductDetailsComponent/ChairProductDetails";
+import BedProductDetails from "./ProductDetailsComponent/BedProductDetails";
 import LightningProductDetails from "./ProductDetailsComponent/LightningProductDetails";
-import DecoreProductDetails from "./ProductDetailsComponent/DecoreProductDetails.js";
-import Page404 from './Pages/Page404.js';
+import DecoreProductDetails from "./ProductDetailsComponent/DecoreProductDetails";
+import Page404 from "./Pages/Page404";
 
-function App() {
+const App = () => {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
