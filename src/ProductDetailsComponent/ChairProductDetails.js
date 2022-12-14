@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
-import Header from '../Components/Header.js';
-import Footer from '../Components/Footer.js';
-import HeaderImage from './HeaderImage.js';
-import BuyProduct from './BuyProduct.js';
-import Review from './Review.js';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+import HeaderImage from "./HeaderImage";
+import BuyProduct from "./BuyProduct";
+import Review from "./Review";
 
-const protocol = 'http';
-const host = 'localhost';
+const protocol = "http";
+const host = "localhost";
 const port = 8000;
-const url_configuration = {
-  getProduct: 'chair',
+const urlConfiguration = {
+  getProduct: "chair",
 };
-const apiURL = `${protocol}://${host}:${port}/${url_configuration.getProduct}`;
+const apiURL = `${protocol}://${host}:${port}/${urlConfiguration.getProduct}`;
 
-const ChairProductDetails = () => {
+function ChairProductDetails() {
   const [product, setProduct] = useState([]);
 
   const fetchData = () => axios.get(apiURL).then((response) => {
@@ -27,7 +27,7 @@ const ChairProductDetails = () => {
   }, []);
 
   const filterProducts = (id) => {
-    const newID = parseInt(id);
+    const newID = parseInt(id, 10);
     const singleProduct = product.filter((object) => object.id === newID);
     return singleProduct;
   };

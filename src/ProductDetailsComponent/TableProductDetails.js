@@ -1,21 +1,21 @@
-import React, { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import axios from 'axios';
-import Header from '../Components/Header';
-import Footer from '../Components/Footer';
-import HeaderImage from './HeaderImage';
-import BuyProduct from './BuyProduct';
-import Review from './Review';
+import React, { useState, useEffect } from "react";
+import { useParams } from "react-router-dom";
+import axios from "axios";
+import Header from "../Components/Header";
+import Footer from "../Components/Footer";
+import HeaderImage from "./HeaderImage";
+import BuyProduct from "./BuyProduct";
+import Review from "./Review";
 
-const protocol = 'http';
-const host = 'localhost';
+const protocol = "http";
+const host = "localhost";
 const port = 8000;
 const urlConfiguration = {
-  getProduct: 'table',
+  getProduct: "table",
 };
 const apiURL = `${protocol}://${host}:${port}/${urlConfiguration.getProduct}`;
 
-const TableProductDetails = () => {
+function TableProductDetails() {
   const [product, setProduct] = useState([]);
 
   const fetchData = () => axios.get(apiURL).then((response) => {
@@ -27,7 +27,7 @@ const TableProductDetails = () => {
   }, []);
 
   const filterProducts = (id) => {
-    const newID = parseInt(id);
+    const newID = parseInt(id, 10);
     const singleProduct = product.filter((object) => object.id === newID);
     return singleProduct;
   };

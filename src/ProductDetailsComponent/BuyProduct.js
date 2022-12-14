@@ -1,114 +1,127 @@
-import React from 'react';
-import { makeStyles } from '@mui/styles';
-import { Typography } from '@mui/material';
-import Table from '@mui/material/Table';
-import TableCell from '@mui/material/TableCell';
-import TableContainer from '@mui/material/TableContainer';
-import TableRow from '@mui/material/TableRow';
-import Divider from '@mui/material/Divider';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import FacebookOutlinedIcon from '@mui/icons-material/FacebookOutlined';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import AddToCartButton from './AddToCartButton.js';
-import GroupedButtons from './IncDecButton.js';
-import StandardImageList from './StandardListImage.js';
+import React from "react";
+import { makeStyles } from "@mui/styles";
+import { Typography } from "@mui/material";
+import Table from "@mui/material/Table";
+import TableCell from "@mui/material/TableCell";
+import TableContainer from "@mui/material/TableContainer";
+import TableRow from "@mui/material/TableRow";
+import Divider from "@mui/material/Divider";
+import FavoriteBorderIcon from "@mui/icons-material/FavoriteBorder";
+import FacebookOutlinedIcon from "@mui/icons-material/FacebookOutlined";
+import TwitterIcon from "@mui/icons-material/Twitter";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import DiscoverMoreButton from "../Components/DiscoverMoreButton";
+import GroupedButtons from "./IncDecButton";
+import StandardImageList from "./StandardListImage";
 
 const useStyles = makeStyles({
   mainContainer: {
-    margin: '4% 15%',
-    width: '70%',
-    display: 'flex',
+    margin: "4% 15%",
+    width: "70%",
+    display: "flex",
   },
   ImageContainer: {
-    width: '50%',
-    padding: '0rem 2rem 0rem 0rem',
+    width: "50%",
+    padding: "0rem 2rem 0rem 0rem",
   },
   TextContainer: {
-    width: '50%',
-    padding: '10px 30px',
-    '& h5': {
-      fontWeight: 'bold',
+    width: "50%",
+    padding: "10px 30px",
+    "& h5": {
+      fontWeight: "bold",
     },
   },
   TableContainer: {
-    width: '20%',
-    textDecoration: 'none',
-    borderRadius: '0px',
-    '& table': {
-      width: '60%',
-      '& tr': {
-        '& td': {
-          borderBottom: 'none',
-          padding: '2px',
+    width: "20%",
+    textDecoration: "none",
+    borderRadius: "0px",
+    "& table": {
+      width: "60%",
+      "& tr": {
+        "& td": {
+          borderBottom: "none",
+          padding: "2px",
         },
       },
     },
   },
   price: {
-    fontWeight: 'bold',
-    color: '#ef6a40',
+    fontWeight: "bold",
+    color: "#ef6a40",
   },
   description: {
-    color: '#78909c',
+    color: "#78909c",
   },
   buttonContent: {
-    display: 'flex',
+    display: "flex",
+    "& div": {
+      margin: "0px",
+      "& div": {
+        margin: "0 1rem 0 0",
+        "& button": {
+          color: "white",
+          backgroundColor: "#ff7043",
+        },
+        "& button:hover": {
+          color: "#ff7043",
+        },
+      },
+    },
   },
   heartContent: {
-    cursor: 'pointer',
-    marginLeft: '1rem',
-    backgroundColor: 'white',
-    width: '2.5rem',
-    height: '2.5rem',
-    borderRadius: '50%',
-    boxShadow: '0 3px 10px rgb(0 0 0 / 0.2)',
-    '& svg': {
-      color: '#ff7043',
-      margin: '0.5rem 0.5rem',
+    cursor: "pointer",
+    marginLeft: "1rem",
+    backgroundColor: "white",
+    width: "2.5rem",
+    height: "2.5rem",
+    borderRadius: "50%",
+    boxShadow: "0 3px 10px rgb(0 0 0 / 0.2)",
+    "& svg": {
+      color: "#ff7043",
+      margin: "0.5rem 0.5rem",
     },
   },
   FacebookIconContainer: {
-    cursor: 'pointer',
-    display: 'inline-block',
-    margin: ' 2rem 1rem 2rem 0rem',
-    backgroundColor: '#3B5997',
-    textAlign: 'center',
-    width: '2.5rem',
-    height: '2.5rem',
-    borderRadius: '50%',
-    '& svg': {
-      margin: '0.5rem 0.5rem',
-      backgroundColor: '#3B5997',
-      color: 'white',
+    cursor: "pointer",
+    display: "inline-block",
+    margin: " 2rem 1rem 2rem 0rem",
+    backgroundColor: "#3B5997",
+    textAlign: "center",
+    width: "2.5rem",
+    height: "2.5rem",
+    borderRadius: "50%",
+    "& svg": {
+      margin: "0.5rem 0.5rem",
+      backgroundColor: "#3B5997",
+      color: "white",
     },
   },
   TwitterIconContainer: {
-    cursor: 'pointer',
-    display: 'inline-block',
-    margin: ' 2rem 1rem 2rem 0rem',
-    backgroundColor: '#55ADED',
-    width: '2.5rem',
-    height: '2.5rem',
-    borderRadius: '50%',
-    '& svg': {
-      margin: '0.5rem 0.5rem',
-      backgroundColor: '#55ADED',
-      color: 'white',
+    cursor: "pointer",
+    display: "inline-block",
+    margin: " 2rem 1rem 2rem 0rem",
+    backgroundColor: "#55ADED",
+    width: "2.5rem",
+    height: "2.5rem",
+    borderRadius: "50%",
+    "& svg": {
+      margin: "0.5rem 0.5rem",
+      backgroundColor: "#55ADED",
+      color: "white",
     },
   },
   LinkdinIconContainer: {
-    cursor: 'pointer',
-    display: 'inline-block',
-    margin: ' 2rem 1rem 2rem 0rem',
-    backgroundColor: '#0177B5',
-    width: '2.5rem',
-    height: '2.5rem',
-    borderRadius: '50%',
-    '& svg': {
-      margin: '0.5rem 0.5rem',
-      backgroundColor: '#0177B5',
-      color: 'white',
+    cursor: "pointer",
+    display: "inline-block",
+    margin: " 2rem 1rem 2rem 0rem",
+    backgroundColor: "#0177B5",
+    width: "2.5rem",
+    height: "2.5rem",
+    borderRadius: "50%",
+    "& svg": {
+      margin: "0.5rem 0.5rem",
+      backgroundColor: "#0177B5",
+      color: "white",
     },
   },
 });
@@ -117,7 +130,7 @@ const BuyProduct = (props) => {
   const classes = useStyles();
   const product = props.data;
 
-  return product.map((prd, idx) => (
+  return product.map((prd) => (
     <div className={classes.mainContainer} key={prd.id}>
       <div className={classes.ImageContainer}>
         <StandardImageList img={prd.images} />
@@ -151,7 +164,7 @@ const BuyProduct = (props) => {
         </Typography>
         <GroupedButtons />
         <div className={classes.buttonContent}>
-          <AddToCartButton />
+          <DiscoverMoreButton> Add To Cart</DiscoverMoreButton>
           <div className={classes.heartContent}>
             <FavoriteBorderIcon />
           </div>

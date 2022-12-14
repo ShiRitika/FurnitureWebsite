@@ -1,51 +1,51 @@
-import React from 'react';
-import { makeStyles } from '@mui/styles';
-import { Typography } from '@mui/material';
-import ProductTabs from './PopularProductTabs';
+import React from "react";
+import { makeStyles } from "@mui/styles";
+import { Typography } from "@mui/material";
+import ProductTabs from "./PopularProductTabs";
 
 const useStyles = makeStyles({
   PopularProductContainer: {
-    textAlign: 'center',
-    padding: '2rem 10rem 2rem 10rem',
-    '& div': {
-      '& div': {
-        '& div': {
-          cursor: 'pointer',
-          borderRadius: '0px',
-          color: 'black',
-          boxShadow: 'none',
-          fontWeight: 'bold',
-          '& button': {
-            color: 'black',
-            textTransform: 'capitalize',
-            minWidth: '16.66%',
+    textAlign: "center",
+    padding: "2rem 10rem 2rem 10rem",
+    "& div": {
+      "& div": {
+        "& div": {
+          cursor: "pointer",
+          borderRadius: "0px",
+          color: "black",
+          boxShadow: "none",
+          fontWeight: "bold",
+          "& button": {
+            color: "black",
+            textTransform: "capitalize",
+            minWidth: "16.66%",
           },
-          '& button.Mui-selected ': {
-            color: '#ff7043',
+          "& button.Mui-selected ": {
+            color: "#ff7043",
           },
-          '& span.MuiTabs-indicator': {
-            backgroundColor: '#ff7043',
+          "& span.MuiTabs-indicator": {
+            backgroundColor: "#ff7043",
           },
         },
       },
     },
-    '& h3': {
-      fontWeight: 'bold',
-      fontSize: '2rem',
-      margin: '1rem',
+    "& h3": {
+      fontWeight: "bold",
+      fontSize: "2rem",
+      margin: "1rem",
     },
-    '& p': {
-      color: 'rgba(0, 0, 0, 0.6)',
+    "& p": {
+      color: "rgba(0, 0, 0, 0.6)",
       fontWeight: 500,
-      padding: '0 12rem',
-      marginBottom: '3rem',
+      padding: "0 12rem",
+      marginBottom: "3rem",
     },
   },
 
   PopularProductHead: {},
 });
 
-const PopularProduct = () => {
+function PopularProduct() {
   const classes = useStyles();
 
   return (

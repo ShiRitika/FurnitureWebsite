@@ -1,28 +1,28 @@
-import * as React from 'react';
-import Button from '@mui/material/Button';
-import Stack from '@mui/material/Stack';
-import { makeStyles } from '@mui/styles';
+import * as React from "react";
+import Button from "@mui/material/Button";
+import Stack from "@mui/material/Stack";
+import { makeStyles } from "@mui/styles";
 
 const useStyle = makeStyles({
   mainContainer: {
-    '& div': {
-      '& button': {
+    "& div": {
+      "& button": {
         fontWeight: 400,
-        fontSize: '0.6rem',
-        borderRadius: '8rem',
-        backgroundColor: 'transparent',
-        color: 'black',
-        border: '1px solid grey',
-        boxShadow: 'none',
-        '& span:hover': {
-          backgroundColor: 'red',
+        fontSize: "0.6rem",
+        borderRadius: "8rem",
+        backgroundColor: "transparent",
+        color: "black",
+        border: "1px solid grey",
+        boxShadow: "none",
+        "& span:hover": {
+          backgroundColor: "red",
         },
       },
     },
   },
 });
 
-const ReviewButtons = () => {
+function ReviewButtons() {
   const classes = useStyle();
   return (
     <div className={classes.mainContainer}>

@@ -16,7 +16,7 @@ import LightningProductDetails from "./ProductDetailsComponent/LightningProductD
 import DecoreProductDetails from "./ProductDetailsComponent/DecoreProductDetails";
 import Page404 from "./Pages/Page404";
 
-const App = () => {
+function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />

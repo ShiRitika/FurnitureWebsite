@@ -2,7 +2,7 @@
 
 ## Poject Desrciption:
 
-Furniture Website is a single page Application made of using Javascript's very popular library React-js. using Material-UI. It have a Navbar at the top of application which have links to route on different pages(but right now it was not active). it contains clickable buttons , different sections to explore and having many products to explore.
+Furniture Website is a single page Application made of using Javascript's very popular library React-js. using Material-UI. It have a Navbar at the top of application which have links to route on different pages(you can route on product, About, Page, Blog, Contact, MyAccount). it contains clickable buttons , different sections to explore and having many products to explore by clicking on particular product you can view product details.
 
 ## Technology Used:
 - React JS : React JS is a Javascript library used to develop the application.
@@ -24,15 +24,25 @@ Furniture Website is a single page Application made of using Javascript's very p
 - How to use props.
 - include useParams.
 - implementation of filter & Map function.
-- React Routing with link , path, params etc. 
+- React Routing with link , path, params etc.
+- how to use useState, UseEffect, onClick event handling, Button toggle etc.
+- How to fetch data from API.
 
-# Getting Started with Create React App
+## API
+- In this project whatever data is used it is fetched from API url which was hosted on localserver.
+- So first need to run localserver because API is not hosted globally it was present locally.
+- Run project(furniture websiteAPI) available on github.URL for it: https://github.com/ShiRitika/furniture-websiteAPI
+
+### About Furniture-websiteAPI
+- it include mongoDB database to store data in form of collection.
+- with the help of postman i had get and post data on mongoDB and get URL to fetch data.
+- Mongoose are used to define schema and models for database.
+
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
-
-In the project directory, you can run:
 
 ### `npm start`
 
@@ -42,6 +52,53 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
 
-Home - Page
+### Home - Page
 
-![Home Page]
+Header part
+![Header](ReadmeFileImage/Header.png)
+- In navbar section Routing is active you can route on any page.
+- Discover More button is clickable.
+
+Popular Products part
+![Popular Product Image](ReadmeFileImage/popularProduct.png)
+
+- You can explore any products by clicking on(Sofa, Table, Chair, Bed, Lightning, Decore).
+- Here product details are available. To explore it click on any image it will navigate you to product details page.
+
+Best Manufacturer Part
+![Best Manufacturer](ReadmeFileImage/bestManufacturer.png)
+
+Product you may like part
+![Like Product](ReadmeFileImage/LikeProduct.png)
+
+- Discover More Button is Clickable here.
+
+Insipred social-media part
+![Social INspired](ReadmeFileImage/SocialInspired.png)
+
+Top Pick part
+![Top Pick](ReadmeFileImage/TopPIck.png)
+
+Footer part
+![Footer](ReadmeFileImage/footer.png)
+- if you click on any link in footer part it will navigate you on page404 error page.
+
+### Product - Page
+![Product](ReadmeFileImage/navlinkPAge.png)
+- When you click on any nav links like(product, About.......) it will Route to a New Page.(New pages right now not available pon working).
+
+### Product Details - Page
+- when you click on any image on product on popular product section it will render Product Detail page .
+
+Product Detail- header part
+![Product Detail header](ReadmeFileImage/procudtDetailsHeader.png)
+
+Product Detail- Buy Product part
+![Buy Product](ReadmeFileImage/Buy%20Product.png)
+- In this section when you click on any image wrapped in small boxes.it will open on big box.(it will help you to explore more images of same product).
+
+Product Detail- Review part
+![Review section](ReadmeFileImage/Review.png)
+
+Product Detail- Footer part
+![Footer](ReadmeFileImage/procudtDetailsFooter.png)

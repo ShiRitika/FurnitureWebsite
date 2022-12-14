@@ -1,31 +1,31 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Rating from '@mui/material/Rating';
-import Typography from '@mui/material/Typography';
-import { makeStyles } from '@mui/styles';
+import * as React from "react";
+import Box from "@mui/material/Box";
+import Rating from "@mui/material/Rating";
+import Typography from "@mui/material/Typography";
+import { makeStyles } from "@mui/styles";
 
 const useStyles = makeStyles({
   mainContainer: {
-    '& h5': {
-      fontSize: '15px',
-      '& span': {
-        '& label': {
-          fontSize: '1.2rem',
-          margin: 'auto',
+    "& h5": {
+      fontSize: "15px",
+      "& span": {
+        "& label": {
+          fontSize: "1.2rem",
+          margin: "auto",
         },
       },
     },
   },
 });
 
-const CustomizedRating = () => {
+function CustomizedRating() {
   const classes = useStyles();
 
   return (
     <div className={classes.mainContainer}>
       <Box
         sx={{
-          '& > legend': { mt: 2 },
+          "& > legend": { mt: 2 },
         }}
       >
         <Typography variant="h5">

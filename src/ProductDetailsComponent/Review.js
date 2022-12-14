@@ -1,99 +1,99 @@
-import React from 'react';
-import { makeStyles } from '@mui/styles';
-import { Typography } from '@mui/material';
-import Rating from '@mui/material/Rating';
-import Avatar from '@mui/material/Avatar';
-import ReviewButtons from './ReviewButtons.js';
-import CustomizedRating from './Rating.js';
-import Avtar1 from '../assets/Avtar1.JPG';
-import Avtar2 from '../assets/Avtar2.JPG';
-import Avtar3 from '../assets/Avtar3.JPG';
-import Form from './Form.js';
+import React from "react";
+import { makeStyles } from "@mui/styles";
+import { Typography } from "@mui/material";
+import Rating from "@mui/material/Rating";
+import Avatar from "@mui/material/Avatar";
+import ReviewButtons from "./ReviewButtons";
+import CustomizedRating from "./Rating";
+import Avtar1 from "../assets/Avtar1.JPG";
+import Avtar2 from "../assets/Avtar2.JPG";
+import Avtar3 from "../assets/Avtar3.JPG";
+import Form from "./Form";
 
 const useStyles = makeStyles({
   mainContainer: {
-    margin: '4% 15%',
-    width: '70%',
-    display: 'flex',
+    margin: "4% 15%",
+    width: "70%",
+    display: "flex",
   },
   ReviewContainer: {
-    width: '50%',
-    padding: '0rem 1rem 0rem 1rem',
+    width: "50%",
+    padding: "0rem 1rem 0rem 1rem",
   },
   AddReviewContainer: {
-    width: '50%',
-    padding: '10px 30px',
-    '& h5': {
-      fontWeight: 'bold',
+    width: "50%",
+    padding: "10px 30px",
+    "& h5": {
+      fontWeight: "bold",
     },
   },
   starContainer: {
-    width: '100%',
-    display: 'flex',
-    margin: '2rem 0rem',
+    width: "100%",
+    display: "flex",
+    margin: "2rem 0rem",
   },
   overallContent: {
-    width: '50%',
-    backgroundColor: '#F4F4F4',
-    textAlign: 'center',
-    padding: '1.5rem',
-    '& h5': {
-      fontWeight: 'bold',
+    width: "50%",
+    backgroundColor: "#F4F4F4",
+    textAlign: "center",
+    padding: "1.5rem",
+    "& h5": {
+      fontWeight: "bold",
     },
-    '& h3': {
-      color: '#e74c1e',
-      fontWeight: 'bold',
+    "& h3": {
+      color: "#e74c1e",
+      fontWeight: "bold",
     },
-    '& h6': {
-      color: '#5a5757',
+    "& h6": {
+      color: "#5a5757",
     },
   },
   starContent: {
-    textAlign: 'center',
-    padding: '0rem',
-    width: '40%',
-    '& h6': {
-      fontSize: '1.15rem',
+    textAlign: "center",
+    padding: "0rem",
+    width: "40%",
+    "& h6": {
+      fontSize: "1.15rem",
     },
   },
   AvtarContainer: {
-    '& div': {
-      '& div': {
-        width: '5rem',
-        height: '5rem',
-        marginRight: '1rem',
+    "& div": {
+      "& div": {
+        width: "5rem",
+        height: "5rem",
+        marginRight: "1rem",
       },
     },
   },
   AvtarContent: {
-    display: 'flex',
+    display: "flex",
   },
   AvtarImage: {
-    width: '20%',
+    width: "20%",
   },
   StarReview: {
-    margin: '0.5rem 0',
-    '& h5': {
-      fontSize: '14px',
+    margin: "0.5rem 0",
+    "& h5": {
+      fontSize: "14px",
     },
-    '& span': {
-      '& label': {
-        '& span': {
-          fontSize: '1.2rem',
+    "& span": {
+      "& label": {
+        "& span": {
+          fontSize: "1.2rem",
         },
       },
     },
   },
   TextContent: {
-    margin: '0 0rem 1rem 0rem',
-    '& h6': {
-      fontSize: '12px',
-      color: '#5a5757',
+    margin: "0 0rem 1rem 0rem",
+    "& h6": {
+      fontSize: "12px",
+      color: "#5a5757",
     },
   },
 });
 
-const Review = () => {
+function Review() {
   const classes = useStyles();
   return (
     <div className={classes.mainContainer}>
